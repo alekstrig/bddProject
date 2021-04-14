@@ -1,0 +1,15 @@
+Feature: Create new account
+  Scenario: Create account with valid data
+    Given I am on the opencart main page
+    When I click on Sign in 'Sign in' button
+    And Click on Create 'No account Create one here' button
+    And Select Social title 'Mr.'
+    And Fill in the form First name 'firstNameUser'
+    And Fill in the form Last name 'lastNameUser'
+    And Fill in the form Email 'emailUser'
+    And Fill in the form Password 'passwordUser'
+    And Fill in the form Birthdate 'birthdateUser'
+    And Select Customer data privacy 'Customer data privacy'
+    And Select I agree to the terms and conditions and the privacy policy 'I agree to the terms and conditions and the privacy policy'
+    And I click on save 'Save' button
+    Then I see that user name 'Name' appears
