@@ -6,7 +6,7 @@ import io.cucumber.java.Before;
 
 
 
-    public class Hooks {
+public class Hooks {
     @Before
     public void initDriver() throws InterruptedException {
         DriverManager.createDriver();

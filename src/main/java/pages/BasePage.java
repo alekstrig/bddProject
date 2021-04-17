@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+
 @Getter
 public abstract class BasePage {
 
@@ -47,8 +48,6 @@ public abstract class BasePage {
 
 
 
-    String  myFirstName = "Oleksandr";
-    String myLastName = "Trygub";
 
 
 

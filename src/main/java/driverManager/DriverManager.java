@@ -34,6 +34,8 @@ public class DriverManager {
       System.out.println("No any adv appears");
     }
   }
+
+
   private static void waitLoadingEnds(WebDriver driver) {
     try {
 

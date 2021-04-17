@@ -1,6 +1,6 @@
 package steps;
 
-import org.junit.Assert;
+
 import pages.MainPage;
 
 public class MainPageSteps {
@@ -14,9 +14,9 @@ public class MainPageSteps {
         mainPage.clickOnSubScribeButton();
     }
 
-    public void verify() throws InterruptedException {
+    public boolean verify() throws InterruptedException {
         mainPage.checkInvalidEmail();
-
+        return true;
     }
 
 

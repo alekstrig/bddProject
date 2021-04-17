@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
+public class MainPage extends BasePage{
 
-public class MainPage extends BasePage {
 
     @FindBy(xpath = "//input[@type ='email']")
     private WebElement emailField;
@@ -16,20 +16,20 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//input[@value = 'Subscribe']")
     private WebElement subScribeButton;
 
-   // @FindBy(xpath = "//form[@method = 'post']//p[@class]")
-   // private WebElement checkEmailField;
+    // @FindBy(xpath = "//form[@method = 'post']//p[@class]")
+    // private WebElement checkEmailField;
 
     @FindBy(xpath = "//button[@data-toggle = 'dropdown']")
     private WebElement dropDownLanguages;
 
-   @FindBy(xpath = "//a[contains(@href, 'show')]")
-   private List<WebElement> listOfLanguages;
+    @FindBy(xpath = "//a[contains(@href, 'show')]")
+    private List<WebElement> listOfLanguages;
 
-   @FindBy(xpath = "//span[@class = 'hidden-sm-down' and text() = 'Sign in']")
-   private WebElement signInButton;
+    @FindBy(xpath = "//span[@class = 'hidden-sm-down' and text() = 'Sign in']")
+    private WebElement signInButton;
 
-   @FindBy(xpath = "//a/span[@class ='hidden-sm-down']")
-   private WebElement accauntName;
+    @FindBy(xpath = "//a/span[@class ='hidden-sm-down']")
+    private WebElement accauntName;
 
     @FindBy(xpath = "//a[contains(@href,'clothes')]")
     private WebElement categoryClothes;
@@ -46,15 +46,14 @@ public class MainPage extends BasePage {
 
     public void clickOnSubScribeButton() throws InterruptedException {
         waitUntilClickable( subScribeButton, 5)
-        .click();
+                .click();
 
     }
 
     public boolean  checkInvalidEmail() {
 
         boolean actualResult = subscribeInput(emailField);
-        Assert.assertEquals(actualResult, false);
-        return false;
+                return false;
 
 
     }
@@ -65,11 +64,11 @@ public class MainPage extends BasePage {
     }
 
     public boolean getListOfLanguages() {
-          List<WebElement> countLanguage = listOfLanguages;
+        List<WebElement> countLanguage = listOfLanguages;
 
         for (WebElement sizeOfList : countLanguage) {
             if (sizeOfList.getText().equals("Українська")) {
-               return true;
+                return true;
             }
         }
 
@@ -81,9 +80,9 @@ public class MainPage extends BasePage {
         List<WebElement> countLanguage = listOfLanguages;
 
         //for (WebElement sizeOfList : countLanguage) {
-            if (countLanguage.size()>= 44) {
-                return true;
-            }
+        if (countLanguage.size()>= 44) {
+            return true;
+        }
 
         return false;
     }
@@ -100,7 +99,7 @@ public class MainPage extends BasePage {
 
     }
 
-    public MainPage howerToClothesCategoty() throws InterruptedException {
+    public pages.MainPage howerToClothesCategoty() throws InterruptedException {
         hoverToElement(categoryClothes);
         return this;
     }
@@ -135,3 +134,4 @@ public class MainPage extends BasePage {
 
 
 }
+
